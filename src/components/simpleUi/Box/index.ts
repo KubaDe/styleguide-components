@@ -19,7 +19,7 @@ export type BaseBoxProps = SpaceProps &
   ColorProps &
   BackgroundProps
 
-const Component: React.FC<BaseBoxProps> = styled.div<BaseBoxProps>`
+const Box: React.FC<BaseBoxProps> = styled.div<BaseBoxProps>`
   ${space}
   ${layout}
   ${typography}
@@ -27,4 +27,4 @@ const Component: React.FC<BaseBoxProps> = styled.div<BaseBoxProps>`
   ${background}
 `
 
-export default Component
+export default Box

@@ -1,30 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
-import {
-  color,
-  ColorProps,
-  background,
-  BackgroundProps,
-  layout,
-  LayoutProps,
-  space,
-  SpaceProps,
-  typography,
-  TypographyProps,
-} from 'styled-system'
+import { typography, TypographyProps } from 'styled-system'
+import Box, { BaseBoxProps } from 'components/simpleUi/Box'
 
-export type BaseBoxProps = SpaceProps &
-  LayoutProps &
-  TypographyProps &
-  ColorProps &
-  BackgroundProps
+export type BaseTextProps = BaseBoxProps & TypographyProps
 
-const Component: React.FC<BaseBoxProps> = styled.div<BaseBoxProps>`
-  ${space}
-  ${layout}
+const Text: React.FC<BaseTextProps> = styled(Box)<BaseTextProps>`
   ${typography}
-  ${color}
-  ${background}
 `
 
-export default Component
+export default Text

@@ -1,13 +1,12 @@
 import React from 'react'
-import Box from '../index'
+import Text from '../index'
 
 export default {
-  title: 'Simple-UI|Box',
+  title: 'Simple-UI|Text',
 }
 
-export const simpleBox = () => <Box backgroundColor="red">This is Box</Box>
-export const halfSizeBox = () => (
-  <Box backgroundColor="blue" size="50%">
-    This is half size Box
-  </Box>
+export const simpleText = () => (
+  <Text backgroundColor="yellow" color="red" fontSize="24px">
+    This is just a simple text
+  </Text>
 )

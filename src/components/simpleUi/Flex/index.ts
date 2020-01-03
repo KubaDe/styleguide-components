@@ -1,4 +1,6 @@
+import React from 'react'
 import styled from 'styled-components'
+
 import {
   flex,
   FlexboxProps,
@@ -7,12 +9,11 @@ import {
   AlignSelfProps,
   OrderProps,
 } from 'styled-system'
-
 import Box, { BaseBoxProps } from 'components/simpleUi/Box'
 
 export type BaseFlexProps = BaseBoxProps & FlexboxProps
 
-const Flex = styled(Box).attrs({
+const Flex: React.FC<BaseBoxProps> = styled(Box).attrs({
   display: 'flex',
 })<BaseFlexProps>`
   ${flex}
@@ -24,7 +25,7 @@ export type BaseFlexItemProps = BaseBoxProps &
   AlignSelfProps &
   OrderProps
 
-export const FlexItem = styled(Box)<BaseFlexItemProps>`
+export const FlexItem: React.FC<BaseBoxProps> = styled(Box)<BaseFlexItemProps>`
   ${flex}
 `
 

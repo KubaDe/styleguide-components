@@ -1,10 +1,11 @@
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
-import theme from 'config/theme'
+import theme, { GlobalStyles } from 'config/theme'
 
 
 const themeDecorator = (storyFn: () => any) =>
     <ThemeProvider theme={theme}>
+        <GlobalStyles/>
         {storyFn()}
     </ThemeProvider>;
 

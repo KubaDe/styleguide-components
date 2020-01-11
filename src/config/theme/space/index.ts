@@ -1,4 +1,4 @@
-export interface Space {
+export interface Index {
   none?: number
   '3xs'?: string
   '2xs'?: string
@@ -12,7 +12,7 @@ export interface Space {
   [index: number]: number
 }
 
-export const space: Space = [0, 4, 8, 16, 24, 32, 40, 64, 128, 256]
+export const space: Index = [0, 4, 8, 16, 24, 32, 40, 64, 128, 256]
 
 space['none'] = space[0]
 space['3xs'] = space[1] + 'px'

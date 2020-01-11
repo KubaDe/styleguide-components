@@ -25,7 +25,7 @@ export type BaseFlexItemProps = BaseBoxProps &
   AlignSelfProps &
   OrderProps
 
-export const FlexItem: React.FC<BaseBoxProps> = styled(Box)<BaseFlexItemProps>`
+export const FlexItem: React.FC<BaseFlexItemProps> = styled(Box)<BaseFlexItemProps>`
   ${flex}
 `
 

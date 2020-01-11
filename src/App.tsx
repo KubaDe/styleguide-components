@@ -1,4 +1,4 @@
-import Box from 'components/Box'
+import Box from 'components/simpleUi/Box'
 import React from 'react'
 
 const App: React.FC = () => {

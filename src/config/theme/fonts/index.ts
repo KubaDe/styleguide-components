@@ -1,10 +1,10 @@
 import { css } from 'styled-components'
-export interface Fonts {
+export interface Index {
   primary?: string
   secondary?: string
 }
 
-export const fonts: Fonts = {
+export const fonts: Index = {
   primary: `'Raleway', sans-serif`,
   secondary: `'Stoke', serif`,
 }

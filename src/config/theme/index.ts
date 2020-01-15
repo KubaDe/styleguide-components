@@ -4,6 +4,7 @@ import { fonts, fontsImportCss } from './fonts'
 import { fontSizes } from './fontSizes'
 import { space } from './space'
 import { colors } from './colors'
+import { shadows } from './shadows'
 
 /**
  *
@@ -30,6 +31,7 @@ const index = {
   space,
   fonts,
   colors,
+  shadows,
 }
 
 export const GlobalStyles = createGlobalStyle`

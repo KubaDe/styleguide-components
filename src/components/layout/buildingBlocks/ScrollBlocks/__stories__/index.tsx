@@ -1,4 +1,6 @@
 import React from 'react'
+import { css } from 'styled-components'
+import { primaryBackgroundMetamorphosis } from 'presets/transitions'
 import { Machine, StateSchema } from 'xstate'
 import { useMachine } from '@xstate/react'
 
@@ -20,7 +22,7 @@ const checkThreshold = (
   event: Event<number>,
   options: any,
 ): boolean => {
-  if (options && options?.cond?.threshold) {
+  if (options && options.cond.threshold) {
     const threshold = options.cond.threshold
     return event.payload >= threshold
   }
@@ -32,16 +34,13 @@ const thresholdEventFactory = (intersectionRatio: number): Event<number> => ({
   payload: intersectionRatio,
 })
 
-interface States {
-  [key: number]: StateSchema
-}
 
 interface BlockMachineStateSchema {
   states: {
-    0: {}
-    1: {}
-    2: {}
-    3: {}
+    '0': {}
+    '1': {}
+    '2': {}
+    '3': {}
   }
 }
 
@@ -87,28 +86,27 @@ const BlockMachine = Machine<any, BlockMachineStateSchema, any>(
 )
 
 interface StylesPropsMap {
-  [id: number]: Omit<ScrollBlockProps, 'threshold' | 'onThreshold'>
+  [id: string]: Omit<ScrollBlockProps, 'threshold' | 'onThreshold'>
 }
 
 const stylesPropsMap: StylesPropsMap = {
-  0: {
+  '0': {
     backgroundColor: 'primary',
   },
-  1: {
+  '1': {
     backgroundColor: 'primary',
   },
-  2: {
-    backgroundColor: 'secondary ',
+  '2': {
+    backgroundColor: 'secondary',
   },
-  3: {
-    backgroundColor: 'secondary ',
+  '3': {
+    backgroundColor: 'secondary',
   },
 }
 
 export const Basic = () => {
   const [current, send] = useMachine(BlockMachine)
-
-  console.log(current.value)
+  const state: string = String(current.value)
   const onThreshold = (e: IntersectionObserverEntry): void => {
     !current.done && send(thresholdEventFactory(e.intersectionRatio))
   }
@@ -129,6 +127,11 @@ export const Basic = () => {
         maxHeight="3000px"
         onThreshold={onThreshold}
         threshold={thresholds}
+        {...(stylesPropsMap[state] || {})}
+        css={css`
+          ${primaryBackgroundMetamorphosis};
+          
+        `}
       >
         Block 2
       </ScrollBlock>

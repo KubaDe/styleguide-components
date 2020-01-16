@@ -13,7 +13,6 @@
     "@types/node": "^13.1.6",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.0",
-    "@typescript-eslint/eslint-plugin": "^2.7.0",
     "@xstate/react": "^0.8.1",
     "@typescript-eslint/eslint-plugin": "^2.15.0",
     "eslint-config-airbnb-typescript": "^6.3.1",
@@ -32,8 +31,7 @@
     "styled": "^1.0.0",
     "styled-components": "^4.4.1",
     "styled-system": "^5.1.4",
-    "typescript": "~3.7.2",
-    "xstate": "^4.7.6"
+    "xstate": "^4.7.6",
     "typescript": "~3.7.4"
   },
   "prettier": "@will-stone/prettier-config",

@@ -1,4 +1,3 @@
-import { css } from 'styled-components'
 
 const transitionTimes = {
   '3xs': '.05s',

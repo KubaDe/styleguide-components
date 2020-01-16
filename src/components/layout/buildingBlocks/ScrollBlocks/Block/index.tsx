@@ -1,18 +1,19 @@
 import React, { useState, useCallback } from 'react'
 import Observer from '@researchgate/react-intersection-observer'
 import { FlexItem, BaseFlexItemProps } from 'components/simpleUi/Flex'
+import {ScrollBlock} from "../index";
 
 interface BlockRelatedProps {
-  threshold: number[] | number
-  onThreshold: (e: IntersectionObserverEntry) => void
+  threshold?: number[] | number
+  onThreshold?: (e: IntersectionObserverEntry) => void
 }
 
 export type BlockProps = BaseFlexItemProps & BlockRelatedProps
 
 const Block: React.FC<BlockProps> = ({
   children,
-  threshold,
-  onThreshold,
+  threshold = 0,
+  onThreshold = () => {},
   ...props
 }) => {
   // const [isIntersecting, setIsIntersecting] = useState(false)

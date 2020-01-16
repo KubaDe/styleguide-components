@@ -1,5 +1,5 @@
 import React, { ElementType } from 'react'
-import styled, { FlattenSimpleInterpolation } from 'styled-components'
+import styled from 'styled-components'
 
 import {
   color,
@@ -21,7 +21,7 @@ export type BaseBoxProps = SpaceProps &
   TypographyProps &
   ColorProps &
   BackgroundProps &
-  BoxShadowProps & { as?: ElementType, css?: FlattenSimpleInterpolation }
+  BoxShadowProps & { as?: ElementType }
 
 const Box: React.FC<BaseBoxProps> = styled.div<BaseBoxProps>`
   ${space}

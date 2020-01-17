@@ -36,6 +36,9 @@ const index = {
 
 export const GlobalStyles = createGlobalStyle`
   ${fontsImportCss};
+  body {
+    margin: 0;
+  }
 `
 
 export default index

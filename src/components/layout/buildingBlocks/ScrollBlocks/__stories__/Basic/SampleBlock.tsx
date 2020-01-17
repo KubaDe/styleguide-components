@@ -1,28 +1,22 @@
 import React from 'react'
-import { css } from 'styled-components'
-import { primaryBackgroundMetamorphosis } from 'config/presets/transitions'
-import { Machine, StateSchema } from 'xstate'
 import { useMachine } from '@xstate/react'
 
-
-import SampleBlockMachine, { Event } from './SampleBlock.machine'
+import { ScrollBlockProps } from '../../'
+import SampleBlockMachine, { ThresholdEvent } from './SampleBlock.machine'
 import {
-  sampleBlockStylesPropsMap,
-    StyledScrollBlock,
+  StyledScrollBlock,
 } from './SampleBlock.styled'
-
-import { ScrollBlock, ScrollSpine, ScrollBlockProps } from '../../'
 
 const thresholds: number[] = [0.2, 0.5, 0.8]
 
-const thresholdEventFactory = (intersectionRatio: number): Event<number> => ({
+const thresholdEventFactory = (intersectionRatio: number): ThresholdEvent => ({
   type: 'THRESHOLD',
-  payload: intersectionRatio,
+  threshold: intersectionRatio,
 })
 
 type SampleBlockProps = ScrollBlockProps
 
-const SampleBlock: React.FC<SampleBlockProps> = (props) => {
+const SampleBlock: React.FC<SampleBlockProps> = props => {
   const [current, send] = useMachine(SampleBlockMachine)
   const state: string = String(current.value)
 

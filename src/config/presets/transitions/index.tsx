@@ -40,5 +40,5 @@ const timingFunctions = {
 }
 
 export const primaryBackgroundMetamorphosis = `
-  transition: background-color ${transitionTimes.md} ${timingFunctions.easeInBack};
+  transition: background-color ${transitionTimes.lg} ${timingFunctions.easeInOutCirc};
 `

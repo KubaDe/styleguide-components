@@ -1,10 +1,13 @@
-import styled from 'styled-components'
-import css from '@styled-system/css'
-import { ScrollBlock, ScrollBlockProps } from '../../'
 import React from 'react'
+import styled from 'styled-components'
+import css, { CSSObject } from '@styled-system/css'
+
+import { primaryBackgroundMetamorphosis } from 'config/presets/transitions'
+
+import { ScrollBlock, ScrollBlockProps } from '../../'
 
 interface SampleBlockStylesPropsMap {
-  [id: string]: Omit<ScrollBlockProps, 'threshold' | 'onThreshold'>
+  [id: string]: CSSObject
 }
 
 export const sampleBlockStylesPropsMap: SampleBlockStylesPropsMap = {
@@ -31,7 +34,8 @@ type StyledScrollBlock = ScrollBlockProps & SampleBlockRelatedProps
 export const StyledScrollBlock: React.FC<StyledScrollBlock> = styled(
   ScrollBlock,
 )<SampleBlockRelatedProps>`
-  ${props => sampleBlockStylesPropsMap[props.state] && css(sampleBlockStylesPropsMap[props.state])}
-  
-  
+  ${props =>
+    sampleBlockStylesPropsMap[props.state] &&
+    css(sampleBlockStylesPropsMap[props.state])};
+  ${primaryBackgroundMetamorphosis};
 `

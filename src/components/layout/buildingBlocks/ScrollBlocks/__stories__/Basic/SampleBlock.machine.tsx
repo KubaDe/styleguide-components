@@ -1,6 +1,6 @@
 import { Machine } from 'xstate'
 
-export const thresholds: number[] = [0.2, 0.8, 0.9]
+export const thresholds: number[] = [0.2, 0.5, 0.8]
 
 export interface ThresholdEvent {
   type: string
@@ -25,6 +25,7 @@ const checkThreshold = (
 ): boolean => {
   if (options && options.cond.threshold) {
     const threshold = options.cond.threshold
+    console.log(event.threshold, threshold)
     return event.threshold >= threshold
   }
   return false

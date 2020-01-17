@@ -12,13 +12,13 @@ interface SampleBlockStylesPropsMap {
 
 export const sampleBlockStylesPropsMap: SampleBlockStylesPropsMap = {
   '0': {
-    backgroundColor: 'primary',
+    backgroundColor: 'primaries.100',
   },
   '1': {
-    backgroundColor: 'primary',
+    backgroundColor: 'primaries.500',
   },
   '2': {
-    backgroundColor: 'secondary',
+    backgroundColor: 'primaries.900',
   },
   '3': {
     backgroundColor: 'secondary',
@@ -39,5 +39,4 @@ export const StyledScrollBlock: React.FC<StyledScrollBlock> = styled(
     css(sampleBlockStylesPropsMap[props.state])};
   ${primaryBackgroundMetamorphosis};
   scroll-snap-align: start;
-
 `

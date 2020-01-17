@@ -2,12 +2,11 @@ import React from 'react'
 import { useMachine } from '@xstate/react'
 
 import { ScrollBlockProps } from '../../'
-import SampleBlockMachine, { ThresholdEvent } from './SampleBlock.machine'
+import SampleBlockMachine, { ThresholdEvent, thresholds } from './SampleBlock.machine'
 import {
   StyledScrollBlock,
 } from './SampleBlock.styled'
 
-const thresholds: number[] = [0.2, 0.5, 0.8]
 
 const thresholdEventFactory = (intersectionRatio: number): ThresholdEvent => ({
   type: 'THRESHOLD',
@@ -21,6 +20,7 @@ const SampleBlock: React.FC<SampleBlockProps> = props => {
   const state: string = String(current.value)
 
   const onThreshold = (e: IntersectionObserverEntry): void => {
+    console.log(e.intersectionRatio, state)
     !current.done && send(thresholdEventFactory(e.intersectionRatio))
   }
 

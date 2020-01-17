@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@styled-system/css": "^5.1.4",
+    "@researchgate/react-intersection-observer": "^1.0.5",
+    "@styled-system/css": "latest",
     "@styled-system/theme-get": "^5.1.2",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -12,7 +13,9 @@
     "@types/node": "^13.1.6",
     "@types/react": "^16.9.17",
     "@types/react-dom": "^16.9.0",
+    "@types/styled-system__css": "^5.0.4",
     "@typescript-eslint/eslint-plugin": "^2.15.0",
+    "@xstate/react": "^0.8.1",
     "eslint-config-airbnb-typescript": "^6.3.1",
     "eslint-plugin-import": "^2.20.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
@@ -20,6 +23,7 @@
     "eslint-plugin-react-hooks": "^2.3.0",
     "from": "^0.1.7",
     "import": "^0.0.6",
+    "intersection-observer": "^0.7.0",
     "lodash": "^4.17.15",
     "polished": "^3.4.2",
     "react": "^16.12.0",
@@ -28,7 +32,8 @@
     "styled": "^1.0.0",
     "styled-components": "^4.4.1",
     "styled-system": "^5.1.4",
-    "typescript": "~3.7.4"
+    "typescript": "~3.7.4",
+    "xstate": "^4.7.6"
   },
   "prettier": "@will-stone/prettier-config",
   "scripts": {

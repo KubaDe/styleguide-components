@@ -38,4 +38,6 @@ export const StyledScrollBlock: React.FC<StyledScrollBlock> = styled(
     sampleBlockStylesPropsMap[props.state] &&
     css(sampleBlockStylesPropsMap[props.state])};
   ${primaryBackgroundMetamorphosis};
+  scroll-snap-align: start;
+
 `

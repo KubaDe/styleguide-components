@@ -1,16 +1,16 @@
 import React, { Children } from 'react'
 import 'intersection-observer'
-import Flex, { BaseFlexProps } from 'components/simpleUi/Flex'
+import { StyledBox, StyledBoxProps } from './Spine.styled'
 
-export type SpineProps = BaseFlexProps
+export type SpineProps = StyledBoxProps
 
 const Spine: React.FC<SpineProps> = ({ children, ...props }) => {
   return (
-    <Flex {...props} flexDirection="column">
+    <StyledBox {...props}>
       {Children.map(children, child => {
         return child
       })}
-    </Flex>
+    </StyledBox>
   )
 }
 

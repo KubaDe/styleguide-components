@@ -11,6 +11,8 @@ export const Basic = () => {
         Block 1
       </ScrollBlock>
       <SampleBlock />
+      <SampleBlock />
+      <SampleBlock />
     </ScrollSpine>
   )
 }

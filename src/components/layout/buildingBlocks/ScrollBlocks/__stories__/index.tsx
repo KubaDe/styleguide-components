@@ -2,7 +2,7 @@ import { Basic as BasicStory } from './Basic'
 
 
 export default {
-  title: 'layout|buildingBlocks.ScrollBox',
+  title: 'layout|BuildingBlocks.ScrollBox',
 }
 
 

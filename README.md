@@ -1,5 +1,5 @@
 # Styleguide components
 
-Project module for preparing reusable components set really close to app design
+Project module for preparing reusable components preset. 
 
-| Project under development
+| Project under development. Will be continued after dbskipl project delivery
